@@ -92,12 +92,13 @@
   position: absolute;
   right: 50%;
   bottom: 10px;
+  transform: translate(+50%, +50%);
 }
 .owl-nav, .owl-dots {display: block; text-align: center;}
 .owl-nav .owl-prev, .owl-nav .owl-next{ display:inline-block; margin:5px;}
-.owl-dots .owl-dot {display: inline-block; background-color: #ccc;width: 12px; height: 12px;
+.owl-dots .owl-dot {display: inline-block; background-color: #666;width: 9px; height: 9px;
 border-radius: 50%; margin:5px ; }
-.owl-dots .active {background-color:#666;}
+.owl-dots .active {background-color:#ccc; border-radius:20%; width: 30px; height:9px;}
 .owl-carousel.owl-loaded {
   display: block;
 }
