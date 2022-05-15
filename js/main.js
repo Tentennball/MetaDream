@@ -87,50 +87,52 @@ windows.on('scroll', function() {
 /*--------------------------
      slider carousel
 ---------------------------- */
-    var intro_carousel = $('.intro-carousel');
-    intro_carousel.owlCarousel({
-        loop:true,
-        nav:true,		
-        autoplay:false,
-        dots:false,
-        navText: ["<i class='ti-angle-left'></i>","<i class='ti-angle-right'></i>"],
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:1
-            },
-            1000:{
-                items:1
-            }
-        }
-    });    
+var intro_carousel = $('.intro-carousel');
+intro_carousel.owlCarousel({
+	loop:true,
+	nav:true,		
+	autoplay:{
+		delay: 2000,
+	},
+	dots:true,
+	navText: ["<i class='ti-angle-left'></i>","<i class='ti-angle-right'></i>"],
+	responsive:{
+		0:{
+			items:1
+		},
+		600:{
+			items:1
+		},
+		1000:{
+			items:1
+		}
+	}
+});    
 
 /*---------------------
  Testimonial carousel
 ---------------------*/
 	
-    var review = $('.testimonial-carousel');
-    review.owlCarousel({
-		loop:true,
-		nav:false,
-        margin:40,
-		dots:true,
-        center: true,
-		autoplay:false,
-		responsive:{
-			0:{
-				items:1
-			},
-			768:{
-				items:2
-			},
-			1000:{
-				items:2
-			}
+var review = $('.testimonial-carousel');
+review.owlCarousel({
+	loop:true,
+	nav:false,
+	margin:40,
+	dots:true,
+	center: true,
+	autoplay:false,
+	responsive:{
+		0:{
+			items:1
+		},
+		768:{
+			items:2
+		},
+		1000:{
+			items:2
 		}
-	});
+	}
+});
 
 /*----------------------------
     Contact form

@@ -88,6 +88,11 @@
   -ms-user-select: none;
   user-select: none;
 }
+.owl-nav, .owl-dots {display: block; text-align: center;}
+.owl-nav .owl-prev, .owl-nav .owl-next{ display:inline-block; margin:5px;}
+.owl-dots .owl-dot {display: inline-block; background-color: #ccc;width: 12px; height: 12px;
+border-radius: 50%; margin:5px ; }
+.owl-dots .active {background-color:#666;}
 .owl-carousel.owl-loaded {
   display: block;
 }
