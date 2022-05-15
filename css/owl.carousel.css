@@ -88,6 +88,11 @@
   -ms-user-select: none;
   user-select: none;
 }
+.owl-dots {
+  position: absolute;
+  right: 50%;
+  bottom: 10px;
+}
 .owl-nav, .owl-dots {display: block; text-align: center;}
 .owl-nav .owl-prev, .owl-nav .owl-next{ display:inline-block; margin:5px;}
 .owl-dots .owl-dot {display: inline-block; background-color: #ccc;width: 12px; height: 12px;

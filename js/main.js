@@ -90,7 +90,7 @@ windows.on('scroll', function() {
 var intro_carousel = $('.intro-carousel');
 intro_carousel.owlCarousel({
 	loop:true,
-	nav:true,		
+	nav:false,		
 	autoplay:{
 		delay: 2000,
 	},
