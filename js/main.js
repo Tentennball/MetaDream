@@ -92,7 +92,7 @@ intro_carousel.owlCarousel({
 	loop:true,
 	nav:false,		
 	autoplay:{
-		delay: 2000,
+		delay: 2500,
 	},
 	dots:true,
 	navText: ["<i class='ti-angle-left'></i>","<i class='ti-angle-right'></i>"],
