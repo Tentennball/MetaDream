@@ -36,6 +36,7 @@
 
 		<!-- modernizr css -->
 		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 	</head>
 		<body>
 
@@ -45,37 +46,8 @@
 
         <div id="preloader"></div>
         <header class="header-one">
-            <!-- Start top bar -->
-            <div class="topbar-area fix hidden-xs">
-                <div class="container">
-                    <div class="row">
-                       <div class="col-md-6 col-sm-6">
-                           <div class="topbar-left">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-envelope"></i> info@aievari4.com</a></li>
-                                    <li><a href="#"><i class="fa fa-phone"></i> +909-654-9805</a></li>
-                                </ul>
-							</div>
-                        </div>
-                        <div class=" col-md-6 col-sm-6">
-                            <div class="topbar-right">
-                                <div class="top-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    </ul> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End top bar -->
             <!-- header-area start -->
-            <div id="sticker" class="header-area hidden-xs">
+            <div id="sticker" class="header-area hidden-xs sttick">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
@@ -84,10 +56,10 @@
                                 <div class="col-md-3 col-sm-3">
                                     <div class="logo">
                                         <!-- Brand -->
-                                        <a class="navbar-brand page-scroll white-logo" href="index-2.html">
-                                            <img src="img/logo/logo3.png" alt="">
+                                        <a class="navbar-brand page-scroll white-logo" href="index-3.html">
+                                            <img src="img/logo/logo.png" alt="">
                                         </a>
-                                        <a class="navbar-brand page-scroll black-logo" href="index-2.html">
+                                        <a class="navbar-brand page-scroll black-logo" href="index-3.html">
                                             <img src="img/logo/logo.png" alt="">
                                         </a>
                                     </div>
@@ -96,7 +68,54 @@
                                 <div class="col-md-9 col-sm-9">
                                     <div class="header-right-link">
                                         <!-- search option end -->
-                                        <a class="s-menu" href="login.html">Login</a>
+                                        <a class="s-menu" data-toggle="modal" data-target="#popup_box">Login</a>
+                                        <div class="modal fade" id="popup_box">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <div class="login-form">
+                                                        <h4 class="login-title">LOGIN</h4>
+                                                        <div class="row">
+                                                            <form id="contactForm" method="POST" action="http://rockstheme.com/rocks/aievari-live/contact.php" class="log-form">
+                                                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                    <input type="text" id="name" class="form-control" placeholder="Username" required data-error="Please enter your name">
+                                                                </div>
+                                                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                    <input type="password" id="msg_subject" class="form-control" placeholder="Password" required data-error="Please enter your message subject">
+                                                                </div>
+                                                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                    <div class="check-group flexbox">
+                                                                        <label class="check-box">
+                                                                            <input type="checkbox" class="check-box-input" checked>
+                                                                            <span class="remember-text">Remember me</span>
+                                                                        </label>
+                        
+                                                                        <a class="text-muted" href="#">Forgot password?</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                    <button type="submit" id="submit" class="login-btn">Login</button>
+                                                                    <div id="msgSubmit" class="h3 text-center hidden"></div> 
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                    <div class="clear"></div>
+                                                                    <div class="separetor"><span>Or with Sign</span></div>
+                                                                    <div class="sign-icon">
+                                                                        <ul>
+                                                                            <li><a class="facebook" href="#">Facebook</a></li>
+                                                                            <li><a class="twitter" href="#">twitter</a></li>
+                                                                            <li><a class="google" href="#">google+</a></li>
+                                                                        </ul>
+                                                                        <div class="acc-not">Don't have an account  <a href="signup.html"> Sign up</a></div>
+                                                                    </div> 
+                                                                </div> 
+                                                            </form> 
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <!-- mainmenu start -->
                                     <nav class="navbar navbar-default">
@@ -187,208 +206,36 @@
         </header>
         <!-- header end -->
         <!-- Start breadcumb Area -->
-        <div class="page-area">
-            <div class="breadcumb-overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="breadcrumb text-center">
-                            <div class="section-headline white-headline">
-                                <h3>Investment plan</h3>
-                            </div>
-                            <ul class="breadcrumb-bg">
-                                <li class="home-bread">Home</li>
-                                <li>Investment plan</li>
-                            </ul>
-                        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="breadcrumb text-center">
+                <div>
+                    <div class="animated breadcrumb-bg invest-bg fadeIn">
+                        <h3 class="animated slideInDown fontc">Community</h3>
                     </div>
-                </div>
+                </div>               
             </div>
         </div>
         <!-- End breadcumb Area -->
         <!-- Start Invest area -->
-        <div class="invest-area bg-color page-padding-2">
+        <div class="animated invest-area bg-color page-padding-2 fadeIn">
             <div class="container">
                 <div class="row">
 					<div class="col-md-12 col-sm-12 col-xs-12">
 						<div class="section-headline text-center">
-                            <h3>The best investment plan</h3>
-                            <p>Help agencies to define their new business objectives and then create professional software.</p>
+                            <p> </p>
 						</div>
 					</div>
 				</div>
-                <div class="row">
-                    <div class="pricing-content">
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="pri_table_list">
-                                <div class="top-price-inner">
-                                   <div class="rates">
-                                        <span class="prices">5%</span><span class="users">Daily</span>
-                                    </div>
-                                    <span class="per-day">10 days</span>
-                                </div>
-                                <ol class="pricing-text">
-                                    <li class="check">Minimam Invest : $100</li>
-                                    <li class="check">Maximam Invest : $1000</li>
-                                    <li class="check">Avarage Monthly : 50% </li>
-                                </ol>
-                                <div class="price-btn blue">
-                                    <a class="blue" href="#">Deposite</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="pri_table_list">
-                                <div class="top-price-inner">
-                                   <div class="rates">
-                                        <span class="prices">15%</span><span class="users">Daily</span>
-                                    </div>
-                                    <span class="per-day">30 days</span>
-                                </div>
-                                <ol class="pricing-text">
-                                    <li class="check">Minimam Invest : $1000</li>
-                                    <li class="check">Maximam Invest : $10000</li>
-                                    <li class="check">Avarage Monthly :100% </li>
-                                </ol>
-                                <div class="price-btn blue">
-                                    <a class="blue" href="#">Deposite</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="pri_table_list">
-                                <div class="top-price-inner">
-                                   <span class="base">Popular</span>
-                                   <div class="rates">
-                                        <span class="prices">50%</span><span class="users">Daily</span>
-                                    </div>
-                                    <span class="per-day">45 days</span>
-                                </div>
-                                <ol class="pricing-text">
-                                    <li class="check">Minimam Invest : $1000</li>
-                                    <li class="check">Maximam Invest : $50000</li>
-                                    <li class="check">Avarage Monthly : 200% </li>
-                                </ol>
-                                <div class="price-btn blue">
-                                    <a class="blue" href="#">Deposite</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="pri_table_list">
-                                <span class="base">Best sale</span>
-                                <div class="top-price-inner">
-                                   <div class="rates">
-                                        <span class="prices">100%</span><span class="users">Daily</span>
-                                    </div>
-                                    <span class="per-day">60 days</span>
-                                </div>
-                                <ol class="pricing-text">
-                                    <li class="check">Minimam Invest : $1000</li>
-                                    <li class="check">Maximam Invest : $50000</li>
-                                    <li class="check">Avarage Monthly : 250% </li>
-                                </ol>
-                                <div class="price-btn blue">
-                                    <a class="blue" href="#">Deposite</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="pri_table_list">
-                                <div class="top-price-inner">
-                                   <div class="rates">
-                                        <span class="prices">115%</span><span class="users">Daily</span>
-                                    </div>
-                                    <span class="per-day">70 days</span>
-                                </div>
-                                <ol class="pricing-text">
-                                    <li class="check">Minimam Invest : $1000</li>
-                                    <li class="check">Maximam Invest : $50000</li>
-                                    <li class="check">Avarage Monthly : 300% </li>
-                                </ol>
-                                <div class="price-btn blue">
-                                    <a class="blue" href="#">Deposite</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="pri_table_list">
-                               <span class="base">Best plan</span>
-                                <div class="top-price-inner">
-                                   <div class="rates">
-                                        <span class="prices">125%</span><span class="users">Daily</span>
-                                    </div>
-                                    <span class="per-day">80 days</span>
-                                </div>
-                                <ol class="pricing-text">
-                                    <li class="check">Minimam Invest : $1000</li>
-                                    <li class="check">Maximam Invest : $70000</li>
-                                    <li class="check">Avarage Monthly :325% </li>
-                                </ol>
-                                <div class="price-btn blue">
-                                    <a class="blue" href="#">Deposite</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="pri_table_list">
-                                <div class="top-price-inner">
-                                   <div class="rates">
-                                        <span class="prices">150%</span><span class="users">Daily</span>
-                                    </div>
-                                    <span class="per-day">90 days</span>
-                                </div>
-                                <ol class="pricing-text">
-                                    <li class="check">Minimam Invest : $1000</li>
-                                    <li class="check">Maximam Invest : $50000</li>
-                                    <li class="check">Avarage Monthly : 350% </li>
-                                </ol>
-                                <div class="price-btn blue">
-                                    <a class="blue" href="#">Deposite</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="pri_table_list">
-                                <span class="base">Top plan</span>
-                                <div class="top-price-inner">
-                                   <div class="rates">
-                                        <span class="prices">200%</span><span class="users">Daily</span>
-                                    </div>
-                                    <span class="per-day">100 days</span>
-                                </div>
-                                <ol class="pricing-text">
-                                    <li class="check">Minimam Invest : $1000</li>
-                                    <li class="check">Maximam Invest : $50000</li>
-                                    <li class="check">Avarage Monthly : 400% </li>
-                                </ol>
-                                <div class="price-btn blue">
-                                    <a class="blue" href="#">Deposite</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <!-- End Invest area -->
         <!--Start payment-history area -->
         <div class="payment-history-area bg-color fix area-padding-2">
             <div class="container">
-               <div class="row">
-					<div class="col-md-12 col-sm-12 col-xs-12">
-						<div class="section-headline text-center">
-                            <h3>Deposite and withdrawals history</h3>
-                            <p>Help agencies to define their new business objectives and then create professional software.</p>
-						</div>
-					</div>
-				</div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="deposite-content">
+                        <div class="animated deposite-content slideInUp">
                             <div class="diposite-box">
-                                <h4>Last deposite</h4>
-                                <span><i class="flaticon-005-savings"></i></span>
                                 <div class="deposite-table">
                                     <table>
                                         <tr>
@@ -432,56 +279,6 @@
                                             <td>Jan 12, 2020</td>
                                             <td>$5000</td>
                                             <td>Bitcoin</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="diposite-box">
-                                <h4>Last withdrawals</h4>
-                                <span><i class="flaticon-042-wallet"></i></span>
-                                <div class="deposite-table">
-                                    <table>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Date</th>
-                                            <th>Amount</th>
-                                            <th>Currency</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Arnold</td>
-                                            <td>Jan 04, 2020</td>
-                                            <td>$1000</td>
-                                            <td>USD</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Jhon Abra</td>
-                                            <td>Jan 07, 2020</td>
-                                            <td>$6000</td>
-                                            <td>USD</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lanisha</td>
-                                            <td>Jan 13, 2020</td>
-                                            <td>$5000</td>
-                                            <td>USD</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gongales</td>
-                                            <td>Jan 12, 2020</td>
-                                            <td>$2000</td>
-                                            <td>USD</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Admond sayhel</td>
-                                            <td>Jan 10, 2020</td>
-                                            <td>$1000</td>
-                                            <td>USD</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Remond</td>
-                                            <td>Jan 02, 2020</td>
-                                            <td>$3000</td>
-                                            <td>USD</td>
                                         </tr>
                                     </table>
                                 </div>
