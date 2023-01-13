@@ -1,0 +1,162 @@
+.blog-area {
+    margin-top: 50px;
+    z-index: 0;
+    background: url(/img/background/bg3.jpg);
+    background-color: #fff;
+    background-repeat: repeat-y;
+    background-position: top center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 101.5px;
+    padding-bottom: 0px;
+}
+
+.blog-area.fix.bg-color.page-padding {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.cover {
+    padding-top: 101.5px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.btn:active:focus,
+.btn:focus,
+.btn.active:focus {
+    outline: none;
+}
+
+.thumbbtn:hover {
+    color: #007bff;
+    cursor: pointer;
+    outline: none;
+    border-color: #007bff;
+}
+
+.thumbbtn.active {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+tr.bordertop {
+    border-top: 2px solid #333333;
+    border-bottom: 1.3px solid #333333;
+}
+
+td.textlf {
+    text-align: left;
+}
+
+tr.lists:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.numcol {
+    color: #9a9a9a;
+}
+
+.textbol {
+    font-weight: 600;
+}
+
+.pagmg {
+    margin-top: 50px;
+    margin-bottom: 4px;
+}
+
+.writebt {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid #007bff;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.writebt:hover {
+    border: 2px solid #003E80;
+}
+
+.writebtlf {
+    text-align: right;
+}
+
+.fa-mar {
+    margin-right: 6px;
+}
+
+.cen {
+    display: flex;
+    justify-content: center;
+}
+
+.section-headline h3 {
+    margin-top: 50px;
+    font-size: 70px;
+}
+
+.section-headline p {
+    margin-top: 50px;
+}
+
+
+/* community view */
+.blog-content {
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.col-md-8.col-sm-8.col-xs-12 {
+    position: relative;
+    width: 100%;
+}
+
+.blog-post-wrapper {
+    width: 75%;
+    margin: 0 auto;
+}
+
+
+.community-btn-group {
+    display: flex;
+    float: right;
+    padding: 0;
+}
+
+.community-btn-group .btn.btn-primary {
+    background-color: #fff;
+    color: #333333;
+    border: solid 1px #333333;
+    margin-left: 10PX;
+    border-radius: 5px;
+}
+
+.btn.btn-primary:hover {
+    background-color: #333333;
+    color: #fff;
+    border: solid 1px #333333;
+}
+
+.blog-search-option {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: block;
+    display: flex;
+    background: #fff;
+    border: 1px solid #2c89f6;
+    border-radius: 10px;
+}
+
+.blog-search-option button {
+    margin: auto;
+}
+
+.blog-search-option button i:hover {
+    color: #2c89f6;
+}

@@ -1,0 +1,31 @@
+<div class="row tag-search">
+    <div class="col-md-8 col-sm-8 col-xs-12">
+        <div class="tags">
+            <div class="popular-tag">
+                <h4>popular tags</h4>
+                <ul>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Agency </a></li>
+                    <li><a href="#">Media</a></li>
+                    <li><a href="#">Social</a></li>
+                    <li><a href="#">Photoshop</a></li>
+                    <li><a href="#">Seo</a></li>
+                    <li><a href="#">development</a></li>
+                    <li><a href="#">Search</a></li>
+                    <li><a href="#">Design</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <form action="#">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <div class="blog-search-option">
+                <input type="text" placeholder="Search...">
+                <button class="button" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

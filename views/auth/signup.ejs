@@ -1,0 +1,85 @@
+<%- include('../includes/head.ejs') %>
+    <!-- signup css -->
+    <link rel="stylesheet" href="/css2/signup.css">
+
+    <%- include('../includes/nav.ejs') %>
+
+    <%- include('../includes/login-popup.ejs') %>
+
+    <!-- Start breadcumb Area -->
+    <div class="page-area">
+        <div class="headertop breadcumb-overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcrumb text-center">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End breadcumb Area -->
+    <!-- Start Slider Area -->
+    <div class="signup-area page-padding">
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-12 col-sm-12 col-xs-12">
+                    <div class="login-page signup-page">
+                        <div class="login-form signup-form">
+                            <h4 class="login-title ">REGISTER</h4>
+                            <div class="row">
+                                <form  method="POST" action="/signup" class="log-form">
+                                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <input type="name" name="name" id="name" class="form-control" placeholder="Username"
+                                            required data-error="Please enter your name">
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <input type="email" name="email" id="email" class="form-control"
+                                            placeholder="Your Email" required data-error="Please enter your email">
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <input type="password" name="password" id="password" class="form-control"
+                                            placeholder="Password" required data-error="Please enter your message subject">
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12 ">
+                                        <div class="check-group flexbox">
+                                            <label class="check-box">
+                                                <input type="checkbox" class="check-box-input" checked>
+                                                <span class="remember-text">I agree terms & conditions</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <button type="submit" id="submit" class="login-btn">Sign up</button>
+                                        <div id="msgSubmit" class="h3 hidden"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </form>
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="clear"></div>
+                                    <div class="separetor"><span>Or with signup</span></div>
+                                    <div class="sign-icon">
+                                        <ul>
+                                            <li><a class="facebook" href="#">Facebook</a></li>
+                                            <li><a class="twitter" href="#">twitter</a></li>
+                                            <li><a class="google" href="#">google+</a></li>
+                                        </ul>
+                                        <div class="acc-not">have an account?
+                                            <a class="curpoint" data-toggle="modal" data-target="#popup_box">Login</a>
+                                            <%- include('../includes/login-popup.ejs') %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../includes/footer.ejs') %>
+
+    <%- include('../includes/end.ejs') %>
+<!-- Mirrored from rockstheme.com/rocks/aievari-live/signup.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:28:23 GMT -->

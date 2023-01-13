@@ -1,0 +1,123 @@
+<%- include('../includes/head.ejs') %>
+    <!-- main css -->
+    <link rel="stylesheet" href="/css2/community.css">
+    <link rel="stylesheet" href="/css2/gallery.css">
+    <link rel="stylesheet" href="/css2/mypage.css">
+
+    <%- include('../includes/nav.ejs') %>
+
+    <%- include('../includes/login-popup.ejs') %>
+
+    <div class="blog-area fix bg-color page-padding">
+        <div class="cover">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <br><br><br>
+                        <div class="section-headline text-center">
+                            <h3>My Page</h3>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="big-taps">
+                        <!-- Nav tabs -->
+                        <div class="col-xs-6 col-md-4">
+                            <div class="left-taps">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active"><a href="#writed-post" aria-controls="writed-post" role="tab" data-toggle="tab">작성한 글</a></li>
+                                    <li role="presentation"><a href="#bookmark" aria-controls="bookmark" role="tab" data-toggle="tab">북마크</a></li>
+                                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">계정 관리</a></li>
+                                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Tab panes -->
+                        <div class="col-xs-12 col-sm-6 col-md-8">
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="writed-post">
+                                    <div class="writed-post-content">
+                                        <!-- Nav tabs -->
+                                        <ul class="nav nav-tabs" role="tablist">
+                                          <li role="presentation" class="active"><a href="#writed-gallery" aria-controls="writed-gallery" role="tab" data-toggle="tab">Gallery</a></li>
+                                          <li role="presentation"><a href="#writed-community" aria-controls="writed-community" role="tab" data-toggle="tab">Community</a></li>
+                                          <li role="presentation"><a href="#request" aria-controls="request" role="tab" data-toggle="tab">Request</a></li>
+                                        </ul>
+                                      
+                                        <!-- Tab panes -->
+                                        <div class="tab-content">
+                                          <div role="tabpanel" class="tab-pane active" id="writed-gallery">
+                                            
+                                            <div class="row">
+                                                <%- include('../includes/pagination.ejs') %>
+                                            </div>
+                                          </div>
+
+
+                                          <div role="tabpanel" class="tab-pane" id="writed-community">
+                                            <div class="col-md-12">
+                                                <div class="animated deposite-content slideInUp">
+                                                    <div class="deposite-table">
+                                                        <table>
+                                                            <tr class="bordertop">
+                                                                <th class="col-md-1">번호</th>
+                                                                <th class="col-md-5">제목</th>
+                                                                <th class="col-md-2">이름</th>
+                                                                <th class="col-md-2">날짜</th>
+                                                                <th class="col-md-1">조회</th>
+                                                                <th class="col-md-1">추천</th>
+                                                            </tr>
+                                                            <% for (var i=0;i<posts.length;i++) { %>
+                                                                <tr class="lists" onClick="location.href='/community/<%= posts[i]._id %>'">
+                                                                    <td class="numcol"><%= i+1 %></td>
+                                                                    <td class="textlf textbol">
+                                                                        <%= posts[i].title %>
+                                                                    </td>
+                                                                    <td class="textbol"><%= posts[i].name %></td>
+                                                                    <td class="numcol">
+                                                                        <%= posts[i].date %>
+                                                                    </td>
+                                                                    <td class="numcol"><%= posts[i].viewCounts %></td>
+                                                                    <td class="numcol">1</td>
+                                                                </tr>
+                                                                <% } %>
+                                                        </table>                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <%- include('../includes/pagination.ejs') %>
+                                            </div>
+                                          </div>
+                                          <div role="tabpanel" class="tab-pane" id="request">
+                                            <div class="row">
+                                                <%- include('../includes/pagination.ejs') %>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      
+                                      </div>
+
+                        
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="bookmark">
+                                    <div class="test" style="background-color: #333333;"></div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="settings">
+                                    <div class="test" style="background-color: #555555;"></div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="messages">...</div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Community area -->
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <%- include('../includes/footer.ejs') %>
+
+    <%- include('../includes/end.ejs') %>

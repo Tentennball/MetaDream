@@ -1,0 +1,72 @@
+<%- include('../includes/head.ejs') %>
+    <!-- Gallery css -->
+    <link rel="stylesheet" href="/css2/gallery.css">
+    <!-- Requestview css -->
+    <link rel="stylesheet" href="/css2/requestview.css">
+
+    <%- include('../includes/nav.ejs') %>
+
+    <!--Blog Area Start-->
+    <div class="blog-area fix page-padding">
+        <div class="cover">
+            <div class="container">
+                <div class="row">
+                    <div class="blog-details">
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                            <!-- single-blog start -->
+                            <article class="blog-post-wrapper">
+                                <div class="blog-banner">
+                                    <div class="blog-content">
+                                        <div class="blog-meta">
+                                            <span class="admin-type">
+                                                <i class="fa fa-user"></i>
+                                                Admin
+                                            </span>
+                                            <span class="date-type">
+                                                <i class="fa fa-calendar"></i>
+                                                <%= post.date %>
+                                            </span>
+                                            <span class="comments-type">
+                                                <i class="fa fa-comment-o"></i>
+                                                07
+                                            </span>
+                                        </div>
+                                        <h4><%= post.title %></h4>
+                                        <%- post.content %>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- single-blog end -->
+                            <% if(isAuth){ %>
+                            <div style=" margin-top: 20px; margin-bottom: 20px;" class="btn-group">
+                                <a href="/request-personer/write/<%= post._id %>?edit=true"
+                                    style=" padding: 10px 20px; background-color: aliceblue; border-radius: 10px; border: solid 1px #808080; color: #000000; display: block"
+                                    class="retouch">수정</a>
+                            </div>
+                            <div style=" margin-top: 20px; margin-bottom: 20px;" class="btn-group">
+                                <form action="/request-personer/delete-post" method="POST">
+                                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                    <input type="hidden" value="<%= post._id %>" name="postId">
+                                    <button type="submit" onclick="alert('삭제되었습니다')"
+                                        style=" padding: 10px 20px; background-color: aliceblue; border-radius: 10px; border: solid 1px #808080; color: #000000;"
+                                        class="delete">삭제</button>
+                                </form>
+                            </div>
+                            <% } %>
+                        </div>
+
+                    </div>
+                    <!-- End Right Sidebar -->
+                </div>
+                <!-- End row -->
+            </div>
+        </div>
+    </div>
+    <!--End of Blog Area-->
+
+    <%- include('../includes/login-popup.ejs') %>
+
+    <%- include('../includes/footer.ejs') %>
+
+    <%- include('../includes/end.ejs') %>
+<!-- Mirrored from rockstheme.com/rocks/aievari-live/community.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:28:01 GMT -->

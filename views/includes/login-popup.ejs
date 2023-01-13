@@ -1,0 +1,53 @@
+<!-- Start login pop up-->
+<div class="modal fade" id="popup_box">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="login-form">
+                <button type="button" class="close" data-dismiss="modal"
+                style="position:absolute; right: 0px; top: 0px;"
+                >&times;</button>
+                <h4 class="login-title">LOGIN</h4>
+                <div class="row loginm">
+                    <form method="POST" action="/login" class="log-form">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <input type="text" name="email" id="email" class="form-control" placeholder="Your Email"
+                                required data-error="Please enter your Email">
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <input type="password" name="password" id="password" class="form-control"
+                                placeholder="Password" required data-error="Please enter your Password">
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <button type="submit" class="login-btn">Login</button>
+                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="check-group flexbox">
+                            <label class="check-box">
+                                <input type="checkbox" class="check-box-input" checked>
+                                <span class="remember-text">Remember me</span>
+                            </label>
+                            <a class="text-muted" href="#">Forgot password?</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="clear"></div>
+                        <div class="separetor"><span>Or with Sign</span></div>
+                        <div class="sign-icon">
+                            <ul>
+                                <li><a class="facebook" href="#">Facebook</a></li>
+                                <li><a class="twitter" href="#">twitter</a></li>
+                                <li><a class="google" href="#">google+</a></li>
+                            </ul>
+                            <div class="acc-not">Don't have an account <a href="/signup"> Sign up</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- login pop up end -->

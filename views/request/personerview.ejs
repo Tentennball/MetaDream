@@ -1,0 +1,254 @@
+<%- include('../includes/head.ejs') %>
+    <!-- Gallery css -->
+    <link rel="stylesheet" href="/css2/request.css">
+    <link rel="stylesheet" href="/css2/requestview.css">
+    <script type="text/javascript">
+        let isClicked = false; 
+        function mouseClick() { 
+            if( isClicked == false ) {
+                isClicked = true; 
+                document.getElementById("bookmarkicon").className = 'fa-solid fa-bookmark bookmark bookmark1';
+            }
+            else if( isClicked == true ) {
+                isClicked = false; 
+                document.getElementById("bookmarkicon").className = 'fa-regular fa-bookmark bookmark';
+            }
+        } 
+        function mouseOver() { 
+            if( isClicked == false ) { 
+                document.getElementById("bookmarkicon").className = 'fa-solid fa-bookmark bookmark bookmark1';
+            } 
+        } 
+        function mouseOut() { 
+            if( isClicked == false ) { 
+                document.getElementById("bookmarkicon").className = 'fa-regular fa-bookmark bookmark';
+            } 
+            else if( isClicked == true ) {
+                document.getElementById("bookmarkicon").className = 'fa-solid fa-bookmark bookmark bookmark1';
+            }
+        } 
+    </script>
+
+    <%- include('../includes/nav.ejs') %>
+
+        <!--Blog Area Start-->
+        <div class="blog-area fix page-padding">
+            <div class="cover">
+                <div class="container">
+                    <div class="row">
+                        <div class="blog-details">
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                <!-- single-blog start -->
+                                <article class="blog-post-wrapper">  
+                                    <div class="blog-banner">
+                                        <div class="blog-images">
+                                            <div class="col-md-10 col-sm-10 col-xs-10">
+                                                <div><h2><%= post.title %></h2></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-2 bookmarkloca" id="bookmark">
+                                                <div><i class="fa-regular fa-bookmark bookmark" id="bookmarkicon" onmouseover="mouseOver()" onclick="mouseClick()" onmouseout="mouseOut()"></i></div>
+                                            </div>
+                                            <div class="glbox tagbox">
+                                                <div class="tags">
+                                                    <div class="blog-tags">
+                                                        <ul>
+                                                            <li><a class="recruit">모집중</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tags">
+                                                    <div class="blog-tags">
+                                                        <ul>
+                                                            <li><a class="indi">개인</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 col-sm-12 col-xs-12 topleft">
+                                                <span class="col-md-2 col-sm-2 col-xs-2 amount-type">
+                                                    <i class="fa-solid fa-won-sign"></i>
+                                                    예상금액
+                                                </span>
+                                                <span class="col-md-9 col-sm-9 col-xs-9 topleftr amount-type">
+                                                    400만원 ~ 500만원
+                                                </span>
+                                            </div>
+
+                                            <div class="col-md-12 col-sm-12 col-xs-12 topleft">
+                                                <span class="col-md-2 col-sm-2 col-xs-2 period-type">
+                                                    <i class="fa-regular fa-clock"></i>
+                                                    예상기간
+                                                </span>
+                                                <span class="col-md-9 col-sm-9 col-xs-9 topleftr period-type">
+                                                    1개월
+                                                </span>
+                                            </div>
+
+                                            <div class="col-md-12 col-sm-12 col-xs-12 topleft">  
+                                                <span class="col-md-2 col-sm-2 col-xs-2 date1-type">
+                                                    <i class="fa fa-calendar"></i>
+                                                    예상시작일 
+                                                </span>
+                                                <span class="col-md-9 col-sm-9 col-xs-9 topleftr period-type">
+                                                    2022-09-01
+                                                </span>
+                                            </div>
+
+                                            <div class="col-md-12 col-sm-12 col-xs-12 topleft">
+                                                <span class="col-md-2 col-sm-2 col-xs-2 cate-type">
+                                                    <i class="fa-solid fa-briefcase"></i>
+                                                    카테고리
+                                                </span>
+                                                <span class="col-md-9 col-sm-9 col-xs-9 topleftr cate-type">
+                                                    개발
+                                                </span>
+                                            </div>
+
+                                            <div class="col-md-12 col-sm-12 col-xs-12 topleft">
+                                                <span class="col-md-2 col-sm-2 col-xs-2 cate-type">
+                                                    <i class="fa-solid fa-user-group"></i>
+                                                    필요인력
+                                                </span>
+                                                <span class="col-md-9 col-sm-9 col-xs-9 topleftr cate-type">
+                                                    2명
+                                                </span>
+                                            </div>
+
+                                            <div class="col-md-12 col-sm-12 col-xs-12 topleft">
+                                                <span class="col-md-2 col-sm-2 col-xs-2 cate-type">
+                                                    <i class="fa-solid fa-align-left"></i>
+                                                    진행방식
+                                                </span>
+                                                <span class="col-md-9 col-sm-9 col-xs-9 topleftr cate-type">
+                                                    외주
+                                                </span>
+                                            </div>
+
+                                            <div class="col-md-12 col-sm-12 col-xs-12 topleft">
+                                                <span class="col-md-2 col-sm-2 col-xs-2 cate-type">
+                                                    <i class="fa-regular fa-calendar-check"></i>
+                                                    모집 마감일
+                                                </span>
+                                                <span class="col-md-9 col-sm-9 col-xs-9 topleftr cate-type">
+                                                    2022-08-31
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <hr>
+                                                <h5 class="txt1">프로젝트 내용</h5>
+                                                <p class="txt2">>>프로젝트 개요</p>
+                                                <p class="txt3">당사는 오픈 메타버스 플랫폼을 개발하고 있습니다....</p>
+                                                <p class="txt2">>>요구 스킬</p>
+                                                <p class="txt3">리액트</p>
+                                                <p class="txt2">>>주요 담당 업무</p>
+                                                <p class="txt3">UI 기획, 메뉴 설계 / 정책문서 작성</p>
+                                                <h5 class="txt1">기타사항</h5>
+                                                <p class="txt2">>>기타 전달사항 또는 우대사항</p>
+                                                <p class="txt3">야간, 주말 근무 시 다음 날 근무 일정 조정이 가능합니다.</p>
+                                                <h5 class="txt1">지원자 요건</h5>
+                                                <p class="txt2">>>지원자 필수 요건</p>
+                                                <p class="txt3">리액트 가능자</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                
+                                <!-- single-blog end -->
+                            </div>
+                            <!-- Start Right Sidebar blog -->
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="left-head-blog right-side">
+                                    <div class="left-blog-page">
+                                        <div class="creator-info">
+                                            <div class="creator-info-top">
+                                                <div class="creator-img">
+                                                    <img src="/img/review/4.jpg" alt="">
+                                                </div>
+                                                <div class="creator-text">
+                                                    <div class="creator-name">
+                                                        <h5>User0000</h5>
+                                                    </div>
+                                                    <div class="creator-email">
+                                                        <span>example@testemail.com</span>
+                                                    </div>
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="creator-info-btn">
+                                                <form action="">
+                                                    <input class="followbtn btn btn-primary" type="submit" value="팔로우">
+                                                </form>
+                                            </div>
+                                            <div class="recently-post-card">
+                                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                                    <div class="single-blog">
+                                                        <div class="blog-content">
+                                                            <div class="col-md-12 col-sm-12 col-xs-12 blog-meta">
+                                                                <span class="col-md-5 col-sm-5 col-xs-5">담당자 이름</span>
+                                                                <span class="col-md-7 col-sm-7 col-xs-7">OOO</span>
+                                                            </div>
+                                                            <div class="col-md-12 col-sm-12 col-xs-12 blog-meta">
+                                                                <span class="col-md-5 col-sm-5 col-xs-5">담당자 연락처</span>
+                                                                <span>010-0000-0000</span>
+                                                            </div>
+                                                            <div class="col-md-12 col-sm-12 col-xs-12 blog-meta">
+                                                                <span class="col-md-5 col-sm-5 col-xs-5">담당자 이메일</span>
+                                                                <span class="col-md-7 col-sm-7 col-xs-7">0000@naver.com</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                                    <div class="single-blog">
+                                                        <div class="blog-content">
+                                                            <div class="blog-meta">
+                                                                <div class="admin-type">
+                                                                    <i class="fa fa-user"></i>
+                                                                    <span>총</span>
+                                                                    <span class="numfontsize">1</span>
+                                                                    <span>명 지원</span>
+                                                                </div>
+                                                                <div class="bookmarkline">
+                                                                    <i class="fa-solid fa-bookmark bookmarkcol"></i>
+                                                                    <span class="numfontsize">2</span>
+                                                                </div>
+                                                                <hr>
+                                                                <div class="dat">  
+                                                                    <!--<i class="fa fa-calendar"></i>-->
+                                                                    <span class="date2-type">
+                                                                        등록일자
+                                                                    </span>
+                                                                    <span class="date2-type">
+                                                                        <%= post.date %>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="" class="more-btn btn btn-primary">지원하기</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Right Sidebar -->
+            </div>
+            <!-- End row -->
+        </div>
+        </div>
+        </div>
+        <!--End of Blog Area-->
+
+        <%- include('../includes/login-popup.ejs') %>
+
+            <%- include('../includes/footer.ejs') %>
+
+                <%- include('../includes/end.ejs') %>
+                    <!-- Mirrored from rockstheme.com/rocks/aievari-live/community.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:28:01 GMT -->

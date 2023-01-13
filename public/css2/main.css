@@ -1,0 +1,23 @@
+.imgs {
+    height: 500px;
+}
+
+.intro-area {
+    margin-top: 100px;
+}
+
+.col-md-6 {
+    cursor: pointer;
+}
+
+.mainmidlf {
+    margin-right: 10px;
+}
+
+.mainmidr {
+    margin-left: 10px;
+}
+
+.section-headline p {
+    margin-bottom: 28px;
+}

@@ -1,0 +1,32 @@
+<div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="single-blog">
+        <div class="blog-image">
+            <a href="/gallery/<%= post._id %>">
+                <img src="img/blog/lotte_1.png" alt="">
+            </a>
+        </div>
+        <div class="blog-content">
+            <div class="blog-meta">
+                <span class="admin-type">
+                    <i class="fa fa-user"></i>
+                    David
+                </span>
+                <span class="date-type">
+                    <i class="fa fa-calendar"></i>
+                    <%= post.date %>
+                </span>
+                <span class="comments-type">
+                    <i class="fa fa-comment-o"></i>
+                    13
+                </span>
+                <span class="like-type">
+                    <i class="fa-solid fa-heart"></i>
+                    20
+                </span>
+            </div>
+            <a href="/gallery/<%= post._id %>">
+                <h4><%= post.title %></h4>
+            </a>
+        </div>
+    </div>
+</div>

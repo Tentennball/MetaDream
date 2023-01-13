@@ -1,0 +1,148 @@
+</head>
+
+<body>
+
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id="preloader"></div>
+        <header class="header-one">
+            <!-- header-area start -->
+            <div id="sticker" class="header-area header-area-2 hidden-xs">
+                <div class="header-area header-white">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="row">
+                                    <!-- logo start -->
+                                    <div class="col-md-3 col-sm-3">
+                                        <div class="logo">
+                                            <!-- Brand -->
+                                            <a class="navbar-brand page-scroll white-logo" href="/">
+                                                <img src="/img/logo/logo.png" alt="">
+                                            </a>
+                                            <a class="navbar-brand page-scroll black-logo" href="/">
+                                                <img src="/img/logo/logo.png" alt="">
+                                            </a>
+                                        </div>
+                                        <!-- logo end -->
+                                    </div>
+                                    <div class="col-md-9 col-sm-9">
+                                        <div class="header-right-link">
+                                            <div class="search">
+                                                <form action="">
+                                                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                                    <div class="searchform">
+                                                        <input class="btn_text searchin" type="text" placeholder="Search..">
+                                                        <button class="btn_search" ></button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                                <% if(!isAuth){ %>
+                                                    <a class="s-menu" data-toggle="modal" data-target="#popup_box">Login</a>
+                                                    <a class="s-menu" href="/signup">sign up</a>
+                                                <% }else{ %>
+                                                    <form action="/logout" method="POST">
+                                                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                                        <input class="btn logoutbt" type="submit" value="LOGOUT">
+                                                    </form>
+                                                    <div class="logined-user-info">
+                                                        <div class="user-picture">
+                                                            <img src="/img/review/3.jpg" alt="">
+                                                        </div>
+                                                        <a href="/mypage" class="mypage">My page</a>
+                                                    </div>
+                                                <% } %>
+                                        </div>
+                                        <!-- mainmenu start -->
+                                        <nav class="navbar navbar-default">
+                                            <div class="collapse navbar-collapse" id="navbar-example">
+                                                <div class="main-menu">
+                                                    <ul class="nav navbar-nav navbar-right">
+                
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                        <!-- mainmenu end -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-area header-blue">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                
+                                <div class="row">
+                                    <nav class="navbar navbar-default" style="height: 4.5rem; width:100%">
+                                        <div class="collapse navbar-collapse" id="navbar-example">
+                                            <div class="main-menu">
+                                                <ul class="nav navbar-nav navbar-right flexst">
+                                                    <li><a class="pages <%= path === '/request' ? 'h6mar2' : 'h6mar' %>" href="/request-personer">Request</a>
+                                                        <ul class="sub-menu">
+                                                            <li><a href="/request-personer">Personer</a></li>
+                                                            <li><a href="/request-enterprise">Enterprise</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a class="<%= path === '/gallery' ? 'h6mar2' : 'h6mar' %>" href="/gallery">Gallery</a></li>
+                                                    <li><a class="<%= path === '/community' ? 'h6mar2' : 'h6mar' %>" href="/community">Community</a></li>
+                                                    <li><a class="pages <%= path === 'news' ? 'h6mar2' : 'h6mar' %>" href="/news">News</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                    <!-- logo start -->
+                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- header-area end -->
+            <!-- mobile-menu-area start -->
+            <div class="mobile-menu-area hidden-lg hidden-md hidden-sm">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mobile-menu">
+                                <div class="logo">
+                                    <a href="/"><img src="/img/logo/logo.png" alt="" /></a>
+                                </div>
+                                <nav id="dropdown">
+                                    <ul>
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="/gallery">Gallery</a></li>
+                                        <li><a href="/community">Community</a></li>
+                                        <li><a class="pages" href="#">Pages</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="team.html">team</a></li>
+                                                <li><a href="faq.html">FAQ</a></li>
+                                                <li><a href="review.html">Reviews</a></li>
+                                                <li><a href="/login">Login</a></li>
+                                                <li><a href="/signup">Register</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="pages" href="#">Blog</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="blog.html">Blog grid</a></li>
+                                                <li><a href="blog-sidebar.html">Blog Sidebar</a></li>
+                                                <li><a href="blog-details.html">Blog Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact.html">contacts</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile-menu-area end -->
+        </header>
+        <!-- header end -->

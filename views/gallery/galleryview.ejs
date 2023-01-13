@@ -1,0 +1,114 @@
+<%- include('../includes/head.ejs') %>
+    <!-- Gallery css -->
+    <link rel="stylesheet" href="/css2/gallery.css">
+
+    <%- include('../includes/nav.ejs') %>
+
+        <!--Blog Area Start-->
+        <div class="blog-area fix page-padding">
+            <div class="cover">
+                <div class="container">
+                    <div class="row">
+                        <div class="blog-details">
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                <!-- single-blog start -->
+                                <article class="blog-post-wrapper">
+                                    <div class="blog-banner">
+                                        <div class="blog-images">
+                                            <img src="/img/logo/lotte_5.jpg" alt="">
+                                            <img src="/img/feature/lotte_2.png" alt="">
+                                            <img src="/img/blog/lotte_3.png" alt="">
+                                        </div>
+                                        <div class="blog-content">
+                                            <!-- 좋아요 form tag -->
+                                                <form action="">
+                                                    <div class="like-btn btn btn-primary">
+                                                        <i class="fa-solid fa-heart"></i>
+                                                        Like
+                                                    </div>
+                                                </form>
+                                            <div class="blog-meta">
+                                                <span class="admin-type">
+                                                    <i class="fa fa-user"></i>
+                                                    David
+                                                </span>
+                                                <span class="date-type">
+                                                    <i class="fa fa-calendar"></i>
+                                                    <%= post.date %>
+                                                </span>
+                                                <span class="comments-type">
+                                                    <i class="fa fa-comment-o"></i>
+                                                    13
+                                                </span>
+                                                <span class="like-type">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                    20
+                                                </span>
+
+                                            </div>
+                                            <h4>모험과 신비의 나라로 함께 떠나볼까요?</h4>
+                                            <p>가까운 곳에서 롯데월드를 즐겨보세요! 한 번 더 새로워진 롯데월드!
+                                            </p>
+                                            <% if(isAuth) { %>
+                                                <div class="gallery-btn-group">
+                                                    <a href="/gallery/writing/<%= post._id %>?edit=true"
+                                                        class="retouch btn btn-primary ">수정</a>
+                                                    <form action="/gallery/delete-post" method="POST">
+                                                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                                        <input type="hidden" value="<%= post._id %>" name="postId">
+                                                        <button type="submit"
+                                                            class="delete btn btn-primary ">삭제</button>
+                                                    </form>
+                                                </div>
+                                                <% } %>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- single-blog end -->
+                            </div>
+                            <!-- Start Right Sidebar blog -->
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="left-head-blog right-side">
+                                    <div class="left-blog-page">
+                                        <div class="creator-info">
+                                            <div class="creator-info-top">
+                                                <div class="creator-img">
+                                                    <img src="/img/review/4.jpg" alt="">
+                                                </div>
+                                                <div class="creator-text">
+                                                    <div class="creator-name">
+                                                        <h5>David</h5>
+                                                    </div>
+                                                    <div class="creator-email">
+                                                        <span>David@gmail.com</span>
+                                                    </div>
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="creator-info-btn">
+                                                <form action="">
+                                                    <input class="followbtn btn btn-primary" type="submit" value="팔로우">
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Right Sidebar -->
+            </div>
+            <!-- End row -->
+        </div>
+        </div>
+        </div>
+        <!--End of Blog Area-->
+
+        <%- include('../includes/login-popup.ejs') %>
+
+            <%- include('../includes/footer.ejs') %>
+
+                <%- include('../includes/end.ejs') %>
+                    <!-- Mirrored from rockstheme.com/rocks/aievari-live/community.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:28:01 GMT -->

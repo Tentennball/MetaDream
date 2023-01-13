@@ -1,0 +1,266 @@
+/* Gallery css */
+/* Navbar area */
+.header-one {
+    z-index: 1;
+}
+
+/* Background area */
+.blog-area {
+    z-index: 0;
+    background: url(/img/background/bg3.jpg);
+    background-repeat: repeat-y;
+    background-position: top center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 101.5px;
+    padding-bottom: 0px;
+    margin-top: 50px;
+}
+
+.cover {
+    padding-top: 61px;
+    padding-bottom: 100px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Search options area */
+.left-blog li:last-child {
+    border-bottom: 0;
+}
+
+/* Single blog area */
+.single-blog {
+    position: relative;
+    width: 370px;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+/* Request view css */
+
+.blog-banner {
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.blog-images {
+    padding: 30px 30px 65px;
+    display: inline-block;
+}
+
+.blog-images img {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 3px solid #f5f5f5;
+}
+
+.blog-content {
+    border: 10px black;
+}
+
+.gallery-btn-group {
+    display: flex;
+    float: right;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.gallery-btn-group .btn.btn-primary {
+    background-color: #fff;
+    color: #333333;
+    border: solid 1px #333333;
+    margin-left: 10PX;
+    border-radius: 5px;
+}
+
+.btn.btn-primary:hover {
+    background-color: #333333;
+    color: #fff;
+    border: solid 1px #333333;
+}
+
+/* Userinfo area */
+.creator-info {
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.creator-info .creator-info-top {
+    position: relative;
+    display: flex;
+    margin: 0;
+}
+
+.creator-info .creator-img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    line-height: 90px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.creator-info .creator-img img {
+    border-radius: 5px;
+    width: 90px;
+}
+
+.creator-info .creator-text {
+    position: relative;
+    width: 160px;
+    padding: 15px;
+    vertical-align: middle;
+}
+
+.creator-info .creator-name h5 {
+    margin: 0;
+}
+
+.creator-info-btn {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.followbtn.btn.btn-primary,
+.more-btn.btn.btn-primary {
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #2c89f6;
+    color: #fff;
+    border: solid 2px #fff;
+    width: 100%;
+}
+
+.followbtn.btn.btn-primary:hover,
+.more-btn.btn.btn-primary:hover {
+    background-color: #fff;
+    color: #2c89f6;
+    border: solid 2px #2c89f6;
+    width: 100%;
+}
+
+.more-btn.btn.btn-primary,
+.more-btn.btn.btn-primary:hover {
+    width: 50%;
+    transform: translate(100%, 0);
+}
+
+.recently-post-card .col-md-4.col-sm-6.col-xs-12 {
+    position: relative;
+    width: 100%;
+}
+
+.recently-post-card .col-md-4.col-sm-6.col-xs-12 .single-blog {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.bookmarkloca {
+    position: relative;
+    top: -34px;
+    height: 65px;
+}
+
+.bookmark {
+    font-size: 60px;
+    text-shadow: 1px 1px 4px #f7d276;
+    color: #F6BD2C;
+}
+
+.bookmark1 {
+    font-size: 65px;
+}
+
+.bookmark:hover {
+    cursor: pointer;
+}
+
+.bookmarkcol {
+    color: #F6BD2C;
+    margin-right: 20px;
+    font-size: 19px;
+    margin-top: 15px;
+}
+
+.topleft {
+    margin-top: 13px;
+}
+
+.topleftr {
+    margin-left: 30px;
+}
+
+hr {
+    margin: 20px 0px;
+}
+
+.tags ul li {
+    margin: 5px 7px 5px 0px;
+}
+
+.tagbox {
+    margin-bottom: 5px;
+}
+
+.txt1 {
+    line-height: 35px;
+    margin: 40px 0px 25px;
+}
+
+.txt2 {
+    font-weight: bolder;
+    margin-bottom: 7px;
+}
+
+.txt3 {
+    margin-left: 9px;
+}
+
+.blog-details .blog-content {
+    padding: 25px 30px 15px;
+}
+
+.blog-meta {
+    margin-bottom: 10px;
+}
+
+.admin-type i {
+    margin-right: 15px;
+}
+
+.blog-meta span {
+    padding: 0px;
+}
+
+span.date2-type {
+    margin-left: 15px;
+    color: #C3C3C3;
+}
+
+span.numfontsize {
+    font-size: 16px;
+}
+
+.bookmarkline {
+    display: flex;
+    align-items: baseline;
+}
+
+.dat {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}

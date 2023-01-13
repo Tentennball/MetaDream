@@ -1,0 +1,87 @@
+<%- include('../includes/head.ejs') %>
+    <!-- community css -->
+    <link rel="stylesheet" href="/css2/community.css">
+    <!-- communityPost css -->
+    <link rel="stylesheet" href="/css2/communityPost.css">
+
+    <script src="/js/ckeditor.js"></script>
+    <script src="/js/ko.js"></script>​
+
+    <%- include('../includes/nav.ejs') %>
+
+    <%- include('../includes/login-popup.ejs') %>
+
+    <!-- Start Invest area -->
+    <!-- <div class="animated invest-area bg-color page-padding-2 fadeIn">
+            <div class="container">
+                <div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="section-headline text-center">
+                            <p> </p>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div> -->
+    <!-- End Invest area -->
+
+    <!--Start Community area -->
+    <div class="blog-area fix bg-color page-padding blog-area-mg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 pagmg">
+                    <div class="diposite-box dipo2">
+                        <ul class="ulsize">
+                            <li class="list-group-item">
+                                <h5 class="h5mg"><% if (editing) { %>글 수정하기<% } else { %>글쓰기<% } %></h5>
+                            </li>
+                            <form action="/community/<% if (editing) { %>writing/<%= post._id %><% } else { %>writing<% } %>" method="POST">
+                                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                <li class="list-group-item">
+                                    <div class="form-group">
+                                        <label class="col-md-2 col-form-label">제목</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" name="title" id="title"
+                                                maxlength="255" value="<% if (editing) { %><%= post.title %><% } %>"required>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <textarea id="editor" name="content"><% if (editing) { %><%= post.content %><% } %></textarea>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                    </div>    
+                                </li>
+                                <% if (editing) { %>
+                                    <input type="hidden" value="<%= post._id %>" name="postId">
+                                <% } %>
+                                <input class="btn writebt btnsub" type="submit" value="<% if (editing) { %>수정완료<% } else { %>작성완료<% } %>">
+                            </form>
+
+                            <script>
+                                ClassicEditor
+                                    .create(document.querySelector('#editor'),{
+                                        simpleUpload: {
+                                            uploadUrl: '/community/writing',
+                                        },
+                                    })
+                                    .catch(error => {
+                                        console.error(error);
+                                    });
+                            </script>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- End Community area -->
+
+    <%- include('../includes/footer.ejs') %>
+
+    <%- include('../includes/end.ejs') %>
+<!-- Mirrored from rockstheme.com/rocks/aievari-live/community.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:28:01 GMT -->

@@ -1,0 +1,435 @@
+.blog-area-mg {
+    /*margin-top: 50.5px;*/
+}
+
+.pagetitle {
+    margin-bottom: 40px;
+}
+
+.dipo2 {
+    margin-bottom: 0px;
+}
+
+.h5mg {
+    margin-bottom: 0px;
+}
+
+.ulsize {
+    width: 95%;
+    margin: auto;
+}
+
+.list-group-item {
+    padding: 0px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    margin-top: 10px;
+    padding-bottom: 10px;
+    display: -webkit-box;
+}
+
+.form-group {
+    width: 100%;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    /* font-size: inherit;
+    line-height: 1.5; */
+}
+
+.col-form-label {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 17px;
+}
+
+.ck-editor__editable {
+    height: 400px;
+}
+
+.ck-content {
+    font-size: 12px;
+}
+
+.ck.ck-editor {
+    width: 100% !important;
+}
+
+.btnsub {
+    display: flex;
+    margin-left: auto;
+}
+
+.btnsub:hover {
+    color: white;
+}
+
+/* tabbox */
+.tabbox {
+    font-size: 0px;
+}
+
+.tabbox input[type="radio"] {
+    display: none;
+}
+
+.tabbox label {
+    display: inline-block;
+    width: 15%;
+    /*height: 57px;*/
+    line-height: 40px;
+    font-size: 15px;
+    /*cursor: pointer;*/
+    text-align: center;
+    border: 2px solid #E6E3E3;
+    border-radius: 15px 15px 0 0;
+    border-bottom: 0;
+    background-color: #f1f1f1;
+    margin-bottom: 0px;
+    /*vertical-align: top;*/
+    vertical-align: bottom;
+    height: 38px;
+}
+
+.tabbox input:checked+label {
+    background: #fff;
+    width: 18.75%;
+    cursor: pointer;
+    border: 0;
+    border-radius: 0;
+    height: 56px;
+    margin-right: 3px;
+}
+
+.tabbox .tab-content {
+    display: none;
+    /* width: 500px; */
+    height: 480px;
+    border: 1px solid #eee;
+    font-size: 15px;
+    padding: 15px;
+    border: 6px solid #F6BD2C;
+    border-radius: 0 15px 15px 15px;
+    /*border-top: 0;*/
+    background-clip: content-box;
+}
+
+#tab1:checked~#tab-content1 {
+    display: block;
+    background-color: #fff;
+    background-clip: content-box;
+}
+
+#tab2:checked~#tab-content2 {
+    display: block;
+    background-color: #fff;
+}
+
+#tab3:checked~#tab-content3 {
+    display: block;
+    background-color: #fff;
+}
+
+#tab4:checked~#tab-content4 {
+    display: block;
+    background-color: #fff;
+}
+
+#tab5:checked~#tab-content5 {
+    display: block;
+    background-color: #fff;
+}
+
+#tab6:checked~#tab-content6 {
+    display: block;
+    background-color: #fff;
+}
+
+.tabmenu {
+    padding: 40px 0;
+}
+
+.tabbox1 {
+    padding: 40px 70px 0px 100px;
+}
+
+.tabbox2 {
+    padding: 40px 100px 0px 70px;
+}
+
+.tabboxlab {
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.tabbox .tab-content input[type="radio"] {
+    display: inline-block;
+    margin-right: 79px;
+    margin-left: 25px;
+}
+
+.tab-content label {
+    border: 0;
+    background-color: #fff;
+    width: auto;
+    margin-right: 20px;
+    font-size: 20px;
+    letter-spacing: 10px;
+    vertical-align: inherit;
+}
+
+.tabboxlf {
+    width: fit-content;
+    border: 1px solid #ccc;
+    box-shadow: #ccc 2px 1px;
+    border-radius: 10px;
+    padding: 6px 30px 6px 10px;
+    margin: 15px 0px 20px 0px;
+}
+
+.inputbox {
+    width: 300px;
+    box-shadow: #ccc 2px 1px;
+}
+
+.tabmenulab {
+    background: #F6BD2C;
+    font-size: 18px;
+    line-height: 58px;
+    color: #fff;
+    border: 2px solid #F6BD2C;
+    /*border-bottom: 2px solid #fff;*/
+    height: 60px;
+    width: 222px;
+    margin-left: 0px;
+    border-radius: 15px 15px 0 0;
+
+}
+
+.tabmenuNone {
+    display: none;
+}
+
+label.tabwidth {
+    width: 5.5%;
+}
+
+.bt {
+    position: inherit;
+    /*display: flex;
+    margin-left: auto;*/
+    margin-top: 25px;
+    /*margin-right: 59px;*/
+    padding: 9px 16px;
+    font-size: 17px;
+    margin-bottom: 32px;
+}
+
+.btwidth {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    margin-left: auto;
+    margin-right: 29px;
+}
+
+.arrowr {
+    margin-left: 10px;
+}
+
+.arrowl {
+    margin-right: 10px;
+}
+
+.tab2box {
+    margin-bottom: 50px;
+}
+
+.tab2box2 {
+    margin-bottom: 54px;
+}
+
+.prebt {
+    margin-right: 10px;
+}
+
+.tabboxlf input:checked+label {
+    width: 120px;
+    margin-right: 20px;
+    height: inherit;
+}
+
+.tabboxlf label {
+    width: 120px;
+    margin-right: 20px;
+}
+
+.btn.btn-default.dropdown-toggle {
+    box-shadow: #ccc 2px 1px;
+}
+
+.dropdown-menu.rqcate>li,
+.dropdown-menu.rqperiod>li,
+.dropdown-menu.rqmethod>li,
+.dropdown-menu.rqreg>li {
+    display: block;
+    padding: 3px 40px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+
+.dropdown-menu.rqcate>li:hover,
+.dropdown-menu.rqperiod>li:hover,
+.dropdown-menu.rqmethod>li:hover,
+.dropdown-menu.rqreg>li:hover,
+.dropdown-menu.rqcate>li:focus,
+.dropdown-menu.rqperiod>li:focus,
+.dropdown-menu.rqmethod>li:focus,
+.dropdown-menu.rqreg>li:focus {
+    text-decoration: none;
+    color: #262626;
+    background-color: #f5f5f5;
+}
+
+.dropdown.rqperiod {
+    display: inline;
+}
+
+.catechoi {
+    color: #999;
+}
+
+.numbox {
+    width: 72px;
+    display: inline;
+    padding: 0px 3px 0px 12px;
+}
+
+.numunit {
+    font-size: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-weight: normal;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+    height: 30px;
+}
+
+button#dropdownMenu2 {
+    margin-bottom: 3px;
+    padding: 6px 20px;
+}
+
+.pebox {
+    margin-right: 20px;
+}
+
+.datebox {
+    width: 145px;
+    display: inline;
+    margin-right: 10px;
+    pointer-events: none;
+}
+
+.cal:hover {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.oneline {
+    margin-top: 100px;
+    margin-bottom: 124px;
+}
+
+.choice {
+    display: inline;
+}
+
+.tabboxbug {
+    display: inline;
+}
+
+.tabbox .tab-content .tabboxbug input[type="radio"] {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.tabboxbug input:checked+label {
+    font-size: 15px;
+    letter-spacing: 0;
+    width: fit-content;
+    margin-right: 20px;
+}
+
+.tabboxbug label {
+    font-size: 15px;
+    letter-spacing: 0;
+    width: fit-content;
+    margin-right: 20px;
+    font-weight: normal;
+}
+
+.bugbox {
+    width: 105px;
+    margin-right: 8px;
+}
+
+.oneline4 {
+    margin-bottom: 40px;
+}
+
+.bugerr {
+    margin-top: 5px;
+    margin-left: 164px;
+    font-size: 12px;
+    color: red;
+    visibility: hidden;
+}
+
+textarea#outline,
+textarea#workbusiness,
+textarea#etc {
+    resize: none;
+    height: 11rem;
+    width: 35rem;
+}
+
+.tab5box {
+    margin-bottom: 0;
+}
+
+.tab5bt {
+    position: relative;
+    top: -4rem;
+}
+
+input#need {
+    display: inline;
+    margin-bottom: 1rem;
+}
+
+.plusbt {
+    border: 0;
+    background: white;
+    display: inline;
+}
+
+i.fa-solid.fa-circle-plus {
+    font-size: 2.3rem;
+    color: #00549D;
+    vertical-align: bottom;
+}
+
+i.fa-solid.fa-circle-minus {
+    font-size: 2.3rem;
+    color: red;
+    vertical-align: bottom;
+}
+
+#needWrap {
+    height: 3.7rem;
+}

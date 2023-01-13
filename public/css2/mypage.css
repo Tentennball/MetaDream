@@ -1,0 +1,30 @@
+.left-taps{
+
+}
+
+.left-taps .nav.nav-tabs {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.left-taps .nav.nav-tabs li {
+    margin: 0;
+}
+
+.left-taps .nav.nav-tabs .active {
+    display: block;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: #f4f5f4;
+}
+
+
+.tab-content .col-md-4{
+    width: 370px;
+    margin: 10px;
+}
+.single-blog .blog-content{
+    margin-bottom: 0px;
+}

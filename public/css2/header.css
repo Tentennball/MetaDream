@@ -1,0 +1,171 @@
+.headertop {
+    background: #fff;
+}
+.header-area.sttick {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999999;
+    box-shadow: 0px 0px 3px #ddd, -2px -2px 3px #ddd;
+    background: #fff;
+}
+.header-area.sttick .logo a {
+    display: inline-block;
+    height: auto;
+    padding: 17px 0;
+}
+.header-area.sttick .main-menu ul.navbar-nav li a {
+    padding: 32px 15px;
+    color: #151b2c;
+}
+.header-area.sttick .main-menu ul.nav li ul.sub-menu li a {
+    color: #151b2c;
+    display: block;
+    padding: 5px 15px;
+}
+.header-area.sttick .main-menu ul.nav li ul.sub-menu li a:hover {
+    color: #e6922e;
+}
+.header-area.sttick .logo a.white-logo {
+    display: none;
+}
+.header-area.sttick .logo a.black-logo {
+    display: block;
+}
+.header-area.sttick .s-menu {
+    border: 1px solid #27a1d0;
+    background: #27a1d0;
+    color: #fff;
+    transition: 0.4s;
+}
+.header-area.sttick .s-menu:hover {
+    border: 1px solid #e6922e;
+    background: #fff;
+    color: #e6922e;
+    transition: 0.4s;
+}
+.header-white {
+    background: #fff;
+}
+.header-blue {
+    background: #2c89f6;
+}
+.fadeIn {
+    visibility: visible;
+    animation-delay: 0.2s;
+    animation-name: fadeIn;
+}
+.flexst {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 0px;
+}
+.btn_text {
+    border: 0px solid #fff;
+    width: 159px;
+    margin-top: 5px;
+}
+.btn_search {
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translatey(-50%);
+}
+.btn_search::before {
+    content: "\f002";
+}
+.search {
+    margin-right: 3rem;
+    vertical-align: middle;
+}
+.searchin {
+    width: 190px;
+    padding-right: 30px;
+    border-radius: 25px;
+}
+.searchform {
+    width: 203px;
+    height: 40px;
+    border: 1.5px solid gray;
+    border-radius: 25px;
+}
+.h6mar {
+    margin: 0 8px;
+    border-bottom: 3px solid #2c89f6;
+}
+.h6mar:hover {
+    color: #fff;
+    border-bottom: 3px solid #fff;
+    cursor: pointer;
+}
+.h6mar2 {
+    color: #fff;
+    border-bottom: 3px solid #fff;
+    cursor: pointer;
+}
+.main-menu ul.navbar-nav li a.h6mar2 {
+    color: #fff;
+    font-size: 23px;
+}
+.header-area-2 {
+    z-index: auto;
+}
+/*---------Login CSS---------*/
+.loginm {
+    margin-right: 0px;
+}
+.btn.logoutbt{
+    padding: 10px 25px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: #000;
+    transition: 0.4s;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.btn.logoutbt:hover{
+    color: #2c89f6;
+}
+.header-right-link {
+    display: flex;
+}
+
+.logined-user-info{
+    display: flex;
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    margin-left: 30px;
+}
+.logined-user-info .user-picture{
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+}
+.logined-user-info::before{
+    content: "";
+    width: 2px;
+    background-color: #9a9a9a;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.logined-user-info a{
+    color: #151b2c;
+    margin-left: 20px;
+}
+.logined-user-info a:hover{
+    color: #2c89f6;
+}

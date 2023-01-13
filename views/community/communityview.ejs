@@ -1,0 +1,71 @@
+<%- include('../includes/head.ejs') %>
+    <!-- Gallery css -->
+    <link rel="stylesheet" href="/css2/community.css">
+    <script src="/js/btn.js"></script>
+    <%- include('../includes/nav.ejs') %>
+
+    <!--Blog Area Start-->
+    <div class="blog-area fix page-padding">
+        <div class="cover">
+            <div class="container">
+                <div class="row">
+                    <div class="blog-details">
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                            <!-- single-blog start -->
+                            <article class="blog-post-wrapper">
+                                <div class="blog-banner">
+                                    <div class="blog-content">
+                                        <% if(isAuth) { %>
+                                            <div class="community-btn-group">
+                                                <a href="/community/writing/<%= post._id %>?edit=true" class="retouch btn btn-primary ">수정</a>
+                                                <form action="/community/delete-post" method="POST">
+                                                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                                    <input type="hidden" value="<%= post._id %>" name="postId">
+                                                    <button type="submit" class="delete btn btn-primary ">삭제</button>
+                                                </form>
+                                            </div>
+                                        <% } %>
+                                        <div class="blog-meta">
+                                            <span class="admin-type">
+                                                <i class="fa fa-user"></i>
+                                                Admin
+                                            </span>
+                                            <span class="date-type">
+                                                <i class="fa fa-calendar"></i>
+                                                <%= post.date %>
+                                            </span>
+                                            <span class="comments-type">
+                                                <i class="fa fa-comment-o"></i>
+                                                07
+                                            </span>
+                                        </div>
+                                        <h4><%= post.title %></h4>
+                                        <%- post.content %>
+                                        <% if(post.imageUrl){ %>
+                                        <div>
+                                            <img src="/<%= post.imageUrl %>">
+                                        </div>
+                                        <% } else { %>
+                                        <% } %>
+                                        <button class="btn thumbbtn" onclick ="clickfunc(); adress();">
+                                         좋아요</button>
+                                    </div>
+                                </div>
+                                <%- include('../includes/comment.ejs') %>
+                            </article>
+                        </div>
+                    </div>
+                    <!-- End Right Sidebar -->
+                </div>
+                <!-- End row -->
+            </div>
+        </div>
+    </div>
+    <!--End of Blog Area-->
+
+    <%- include('../includes/login-popup.ejs') %>
+
+    <%- include('../includes/footer.ejs') %>
+
+    <%- include('../includes/end.ejs') %>
+<!-- Mirrored from rockstheme.com/rocks/aievari-live/community.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:28:01 GMT -->

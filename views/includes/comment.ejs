@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="/css2/comment.css">
+
+<div class="single-post-comments">
+    <% if(isAuth){ %>
+    <div class="comment-respond">
+        <h3 class="comment-reply-title">Leave a Comment </h3>
+        <form action="/community/add-comment" method="POST">
+            <div class="input-text-area">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <textarea id="content" name="content" cols="78" rows="1" placeholder="Leave your comment"></textarea>
+                <input type="hidden" value="<%= post._id %>" name="postId">
+                <input class="add-cooment-btn btn btn-primary" type="submit"
+                    value="Post Comment" />
+            </div>
+        </form>
+    </div>
+    <% } %>
+    <div class="comments-area">
+        <div class="comments-heading">
+            <h3><%= comments.length %> comments</h3>
+        </div>
+        <div class="comments-list">
+            <ul>
+                <% for(let comment of comments) { %>
+                <li>
+                    <div class="comments-details">
+                        <div class="comments-list-img">
+                            <img src="/img/blog/avater2.png" alt="post-author">
+                        </div>
+                        <div class="comments-content-wrap">
+                            <div class="comment-meta">
+                                <span class="admin-type">
+                                    <i class="fa fa-user"></i>
+                                    Admin
+                                </span>
+                                <span class="date-type">
+                                    <i class="fa fa-calendar"></i>
+                                    <%= comment.date %>
+                                </span>
+                                <!-- <a href="#">Reply</a> -->
+                                <a href="#">Reply</a>
+                                <a href="#">|</a>
+                                <a href="#">Delete</a>
+                            </div>
+                            <p><%= comment.content %></p>
+                        </div>
+                    </div>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</div>

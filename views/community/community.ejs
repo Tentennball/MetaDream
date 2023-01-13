@@ -1,0 +1,110 @@
+<%- include('../includes/head.ejs') %>
+    <!-- community css -->
+    <link rel="stylesheet" href="/css2/community.css">
+
+    <%- include('../includes/nav.ejs') %>
+
+        <%- include('../includes/login-popup.ejs') %>
+
+            <!-- Start Invest area -->
+            <div class="animated invest-area bg-color page-padding-2 fadeIn">
+            <div class="container">
+                <div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="section-headline text-center">
+                        
+						</div>
+					</div>
+				</div>
+            </div>
+        </div> -->
+            <!-- End Invest area -->
+
+            <!--Start Community area -->
+            <div class="blog-area fix bg-color page-padding">
+                <div class="cover">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="section-headline text-center">
+                                    <h3>Community</h3>
+                                    <p>메타 버스와 관련된 여러 의견을 나누고 소통하세요!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pagmg">
+                                <div class="diposite-box">
+                                    <div class="col-md-10">전체 1 / 10 페이지</div>
+                                    <div class="col-md-2 writebtlf">
+                                        <% if(isAuth) { %>
+                                            <a href="/community/writing">
+                                                <button class="writebt"><i
+                                                        class="fa-solid fa-pencil fa-mar"></i>쓰기</button>
+                                            </a>
+                                            <% } %>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                        <input type="radio" name="searchby" id="searchby" value="bytitle_content" checked="checked">제목+내용
+                                        <input type="radio" name="searchby" id="searchby" value="bytitle">제목
+                                        <input type="radio" name="searchby" id="searchby" value="bycontent">내용
+                                        <div class="blog-search-option">
+                                            <input class="form-control" id="search-input" placeholder="Search...">
+                                            <button class="button" id="search">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                            <script>
+                                                $('#search').click(function(){
+                                                    let searchVal = $('#search-input').val();
+                                                    let searchBy=$('input[name=searchby]:checked').val();
+                                                    window.location.replace('/community/search?value='+searchVal+'&searchby='+searchBy);
+                                                })
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-12">
+                                <div class="animated deposite-content slideInUp">
+                                    <div class="diposite-box">
+                                        <div class="deposite-table">
+                                            <table>
+                                                <tr class="bordertop">
+                                                    <th class="col-md-1">번호</th>
+                                                    <th class="col-md-5">제목</th>
+                                                    <th class="col-md-2">이름</th>
+                                                    <th class="col-md-2">날짜</th>
+                                                    <th class="col-md-1">조회</th>
+                                                    <th class="col-md-1">추천</th>
+                                                </tr>
+                                                <% for (var i=0;i<posts.length;i++) { %>
+                                                    <tr class="lists" onClick="location.href='/community/<%= posts[i]._id %>'">
+                                                        <td class="numcol"><%= i+1 %></td>
+                                                        <td class="textlf textbol">
+                                                            <%= posts[i].title %>
+                                                        </td>
+                                                        <td class="textbol"><%= posts[i].name %></td>
+                                                        <td class="numcol">
+                                                            <%= posts[i].date %>
+                                                        </td>
+                                                        <td class="numcol"><%= posts[i].viewCounts %></td>
+                                                        <td class="numcol">1</td>
+                                                    </tr>
+                                                    <% } %>
+                                            </table>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <%- include('../includes/pagination.ejs') %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Community area -->
+
+            <%- include('../includes/footer.ejs') %>
+
+                <%- include('../includes/end.ejs') %>
+                    <!-- Mirrored from rockstheme.com/rocks/aievari-live/community.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:28:01 GMT -->

@@ -1,0 +1,46 @@
+<%- include('../includes/head.ejs') %>
+<!-- Request css -->
+<link rel="stylesheet" href="/css2/request.css">
+
+    <%- include('../includes/nav.ejs') %>
+
+    <!-- Start Blog Area-->
+    <div class="blog-area fix bg-color page-padding">
+        <div class="cover">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-headline text-center">
+                            <h3>Request</h3>
+                            <p>메타버스 컨텐츠를 의뢰하세요!</p>
+                        </div>
+                    </div>
+                </div>
+                <%- include('../includes/populartags.ejs') %>
+                <%- include('../includes/sort-dd/sort-dropdown_request.ejs') %> 
+                <% if(isAuth){ %>
+                    <div class="wirte">
+                        <button class="writebt" onclick = "location.href = '/request-personer/write'">
+                            <i class="fa-solid fa-pencil fa-mar"></i> 의뢰하기
+                        </button>
+                    </div>
+                    <% } %>
+                    <%- include('../includes/sort-dd/sort-dropdown2.ejs') %>
+                        <!-- 의뢰창 -->
+                        <% for (post of posts) { %>
+                            <%- include('../includes/request/blog.ejs') %>
+                        <% } %>
+                    </div>
+                </div>
+                <%- include('../includes/pagination.ejs') %>
+            </div>
+        </div>
+    </div>
+    <!-- End Blog Area-->
+
+    <%- include('../includes/login-popup.ejs') %>
+
+    <%- include('../includes/footer.ejs') %>
+
+    <%- include('../includes/end.ejs') %>
+    <!-- Mirrored from rockstheme.com/rocks/aievari-live/community.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:28:01 GMT -->

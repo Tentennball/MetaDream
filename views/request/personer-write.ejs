@@ -1,0 +1,492 @@
+<%- include('../includes/head.ejs') %>
+    <!-- request css -->
+    <link rel="stylesheet" href="/css2/request.css">
+    <!-- requestPost css -->
+    <link rel="stylesheet" href="/css2/requestPost.css">
+
+    <script src="/js/ckeditor.js"></script>
+    <script src="/js/ko.js"></script>
+    <script>
+        function next() { 
+            let tabmenulab1 = document.getElementById('tabmenulab1');
+            let tabmenulab2 = document.getElementById('tabmenulab2');
+            let tabmenulab3 = document.getElementById('tabmenulab3');
+            let tabmenulab4 = document.getElementById('tabmenulab4');
+            let tabmenulab5 = document.getElementById('tabmenulab5');
+            let tabmenulab6 = document.getElementById('tabmenulab6');
+
+            if($('#tab1')[0].checked == true && $('#tab2')[0].checked == false){                
+                $('#tab1')[0].checked = false;
+                $('#tab2')[0].checked = true;
+                tabmenulab1.style.display = 'none';
+                tabmenulab2.style.display = 'inline-block';
+            }
+            else if($('#tab2')[0].checked == true && $('#tab3')[0].checked == false){                
+                $('#tab2')[0].checked = false;
+                $('#tab3')[0].checked = true;
+                tabmenulab2.style.display = 'none';
+                tabmenulab3.style.display = 'inline-block';
+            }
+            else if($('#tab3')[0].checked == true && $('#tab4')[0].checked == false){                
+                $('#tab3')[0].checked = false;
+                $('#tab4')[0].checked = true;
+                tabmenulab3.style.display = 'none';
+                tabmenulab4.style.display = 'inline-block';
+            }
+            else if($('#tab4')[0].checked == true && $('#tab5')[0].checked == false){                
+                $('#tab4')[0].checked = false;
+                $('#tab5')[0].checked = true;
+                tabmenulab4.style.display = 'none';
+                tabmenulab5.style.display = 'inline-block';
+            }
+            else if($('#tab5')[0].checked == true && $('#tab6')[0].checked == false){                
+                $('#tab5')[0].checked = false;
+                $('#tab6')[0].checked = true;
+                tabmenulab5.style.display = 'none';
+                tabmenulab6.style.display = 'inline-block';
+            }
+        }
+        function pre() {
+            let tabmenulab1 = document.getElementById('tabmenulab1');
+            let tabmenulab2 = document.getElementById('tabmenulab2');
+            let tabmenulab3 = document.getElementById('tabmenulab3');
+            let tabmenulab4 = document.getElementById('tabmenulab4');
+            let tabmenulab5 = document.getElementById('tabmenulab5');
+            let tabmenulab6 = document.getElementById('tabmenulab6');
+
+            if($('#tab2')[0].checked == true && $('#tab1')[0].checked == false){
+                $('#tab1')[0].checked = true;
+                $('#tab2')[0].checked = false;
+                tabmenulab1.style.display = 'inline-block';
+                tabmenulab2.style.display = 'none';
+            }
+            else if($('#tab3')[0].checked == true && $('#tab2')[0].checked == false){
+                $('#tab2')[0].checked = true;
+                $('#tab3')[0].checked = false;
+                tabmenulab2.style.display = 'inline-block';
+                tabmenulab3.style.display = 'none';
+            }
+            else if($('#tab4')[0].checked == true && $('#tab3')[0].checked == false){
+                $('#tab3')[0].checked = true;
+                $('#tab4')[0].checked = false;
+                tabmenulab3.style.display = 'inline-block';
+                tabmenulab4.style.display = 'none';
+            }
+            else if($('#tab5')[0].checked == true && $('#tab4')[0].checked == false){
+                $('#tab4')[0].checked = true;
+                $('#tab5')[0].checked = false;
+                tabmenulab4.style.display = 'inline-block';
+                tabmenulab5.style.display = 'none';
+            }
+            else if($('#tab6')[0].checked == true && $('#tab5')[0].checked == false){
+                $('#tab5')[0].checked = true;
+                $('#tab6')[0].checked = false;
+                tabmenulab5.style.display = 'inline-block';
+                tabmenulab6.style.display = 'none';
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(function(){
+            $("#date1").datepicker({
+                minDate: 0,
+                changeMonth:true,
+                changeYear:true,
+                dateFormat:"yy-mm-dd",
+                dayNames : ['월요일','화요일','수요일','목요일','금요일','토요일','일요일'],
+                dayNamesMin : ['월','화','수','목','금','토','일'],
+                monthNamesShort:  [ "1월", "2월", "3월", "4월", "5월", "6월","7월", "8월", "9월", "10월", "11월", "12월" ],
+                /*onSelect:function(dateText, inst) {
+                    console.log(dateText);
+                }*/
+            });
+            $("#date2").datepicker({
+                minDate: 0,
+                changeMonth:true,
+                changeYear:true,
+                dateFormat:"yy-mm-dd",
+                dayNames : ['월요일','화요일','수요일','목요일','금요일','토요일','일요일'],
+                dayNamesMin : ['월','화','수','목','금','토','일'],
+                monthNamesShort:  [ "1월", "2월", "3월", "4월", "5월", "6월","7월", "8월", "9월", "10월", "11월", "12월" ],
+                /*onSelect:function(dateText, inst) {
+                    console.log(dateText);
+                }*/
+            });
+        });
+
+        function NumberFormat() {
+            document.getElementById('maxunit').min = document.getElementById('minunit').value
+        }
+
+        function minNum(){
+            let minunit = Number(document.getElementById('minunit').value);
+            let maxunit = Number(document.getElementById('maxunit').value);
+            let maxunitmin = Number(document.getElementById('maxunit').min);
+
+            maxunitmin = minunit;
+
+            if(maxunit < maxunitmin) {
+                document.getElementById("bugerr").style.visibility ='visible';
+            } else if(maxunit >= maxunitmin){
+                document.getElementById("bugerr").style.visibility ='hidden';
+            }
+        }
+
+        
+        $(document).ready(function() {
+            var i=1;
+            $("#plusbt").click(function() {
+                $("#needicon").removeClass("fa-solid fa-circle-minus"); 
+                $("#needicon").addClass("fa-solid fa-circle-plus");
+                /*$(".fa-circle-plus").attr("class", ".fa-circle-minus")*/
+                $("#needicon").attr('id',"needicon"+i);
+                $("#plusbt").attr('id',"plusbt"+i);
+                $("#needWrap").prepend(`<input id="need" name="need" type="text" class="form-control inputbox" placeholder=""/>
+                <button type="button" class="plusbt" id="plusbt"><i class="fa-solid fa-circle-minus" id="needicon"></i></button>`);
+                console.log(i);
+                i++;
+                if(i>4){
+                    $("#plusbt").attr("disabled", true);
+                }
+            });
+        });
+    </script>
+
+    <%- include('../includes/nav.ejs') %>
+
+    <%- include('../includes/login-popup.ejs') %>
+
+    <!-- Start Invest area -->
+    <!-- <div class="animated invest-area bg-color page-padding-2 fadeIn">
+            <div class="container">
+                <div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="section-headline text-center">
+                            <p> </p>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div> -->
+    <!-- End Invest area -->
+
+    
+    <div class="blog-area fix bg-color page-padding blog-area-mg">
+        <div class="cover">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12 pagetitle">
+                        <div class="section-headline text-center">
+                            <h3>Draw Up</h3>
+                            <p>의뢰할 내용을 작성하고 조건에 맞는 프리랜서를 만나보세요!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-md-12 col-sm-12 col-xs-12 tabbox tabmenu">
+                            <input id="tab1" name="tab-menu1" type="radio" checked disabled/>
+                            <label for="tab1" class="tabwidth"><p class="tabmenulab" id="tabmenulab1">① 의뢰인 정보</p></label>
+                            <input id="tab2" name="tab-menu2" type="radio" disabled/>
+                            <label for="tab2" class="tabwidth"><p class="tabmenulab tabmenuNone" id="tabmenulab2">② 프로젝트 기본정보</p></label>
+                            <input id="tab3" name="tab-menu3" type="radio" disabled/>
+                            <label for="tab3" class="tabwidth"><p class="tabmenulab tabmenuNone" id="tabmenulab3">③ 일정</p></label>
+                            <input id="tab4" name="tab-menu4" type="radio" disabled/>
+                            <label for="tab4" class="tabwidth"><p class="tabmenulab tabmenuNone" id="tabmenulab4">④ 예산 및 진행방식</p></label>
+                            <input id="tab5" name="tab-menu5" type="radio" disabled/>
+                            <label for="tab5" class="tabwidth"><p class="tabmenulab tabmenuNone" id="tabmenulab5">⑤ 프로젝트 상세정보</p></label>
+                            <input id="tab6" name="tab-menu6" type="radio" disabled/>
+                            <label for="tab6" class="tabwidth"><p class="tabmenulab tabmenuNone" id="tabmenulab6">⑥ 모집 요건</p></label>
+                            <div id="tab-content1" class="tab-content">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-md-6 col-sm-6 col-xs-6 tabbox1">
+                                        <div>
+                                            <div class="tabboxlab">개인/기업</div>
+                                            <div>
+                                                <div class="tabboxlf">
+                                                    <input id="individual" name="indi_cor" type="radio"  checked="checked"/>
+                                                    <label for="individual">개인</label>
+                                                </div>
+                                                <div class="tabboxlf">
+                                                    <input id="Corporation" name="indi_cor" type="radio" class="radiosty" />
+                                                    <label for="Corporation">기업</label>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6 tabbox2">
+                                        <div class="tabboxlab">담당자 이름</div>
+                                        <input id="picname" name="picname" type="text" class="form-control inputbox" placeholder="담당자 이름을 입력해주세요."/>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-md-6 col-sm-6 col-xs-6 tabbox1">
+                                        <div class="tabboxlab">담당자 이메일</div>
+                                        <input id="picemail" name="picemail" type="text" class="form-control inputbox" placeholder="담당자 이메일을 입력해주세요."/>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6 tabbox2">
+                                        <div class="tabboxlab">담당자 연락처</div>
+                                        <input id="picphone" name="picphone" type="text" class="form-control inputbox" placeholder="담당자 연락처를 입력해주세요."/>
+                                    </div>
+                                </div>
+                                <div class="btwidth">
+                                    <button class="writebt bt" onclick="next()">다음<i class="fa-solid fa-arrow-right arrowr"></i></button>
+                                </div>
+                            </div>
+
+                            <div id="tab-content2" class="tab-content">
+                                <div class="col-md-12 col-sm-12 col-xs-12 tab2box">
+                                    <div class="col-md-6 col-sm-6 col-xs-6 tabbox1">
+                                        <div class="tabboxlab">의뢰명(제목)</div>
+                                        <input id="sub" name="sub" type="text" class="form-control inputbox" placeholder="ex) 메타버스 플랫폼 화면 UI 퍼블리싱"/>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6 tabbox2">
+                                        <div class="tabboxlab">카테고리</div>
+                                        <div class="dropdown">
+                                            <button class="btn btn-default dropdown-toggle rqcate" type="button" id="dropdownMenu1"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                <span class="catechoi">선택해주세요.<span>
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu rqcate" aria-labelledby="dropdownMenu3">
+                                                <li>개발</li>
+                                                <li>디자인</li>
+                                                <li>기획</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 tab2box2">
+                                    <div class="col-md-6 col-sm-6 col-xs-6 tabbox1">
+                                        <div class="tabboxlab">필요인력</div>
+                                        <input id="num" name="num" type="number" class="form-control inputbox numbox" placeholder="" min="1"/>
+                                        <span class="numunit">명</span>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6 tabbox2">
+                                        <div class="tabboxlab">요구 스킬</div>
+                                        <input id="skill" name="skill" type="text" class="form-control inputbox" placeholder="필요한 스킬을 입력해주세요."/>
+                                    </div>
+                                </div>
+                                <div class="btwidth">
+                                    <button class="writebt bt prebt" onclick="pre()"><i class="fa-solid fa-arrow-left arrowl"></i>이전</button>
+                                    <button class="writebt bt" onclick="next()">다음<i class="fa-solid fa-arrow-right arrowr"></i></button>
+                                </div>
+                            </div>
+
+                            <div id="tab-content3" class="tab-content">
+                                <div class="col-md-12 col-sm-12 col-xs-12 tab2box2 oneline">
+                                    <div class="col-md-6 col-sm-6 col-xs-6 tabbox1">
+                                        <div class="tabboxlab">예상 기간</div>
+                                        <input id="period" name="period" type="number" class="form-control inputbox numbox pebox" min="1"/>
+                                        <div class="dropdown rqperiod">
+                                            <button class="btn btn-default dropdown-toggle rqperiod" type="button" id="dropdownMenu2"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                <span class="catechoi">주 / 개월 / 년<span>
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu rqperiod" aria-labelledby="dropdownMenu3">
+                                                <li>주</li>
+                                                <li>개월</li>
+                                                <li>년</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6 tabbox2">
+                                        <div class="tabboxlab">예상 시작일</div>
+                                        <input type="text" class="form-control inputbox datebox" name="date" id="date1" size="12" placeholder="0000-00-00" readonly/>
+                                        <i class="fa fa-calendar cal" onclick="$('#date1').datepicker('show');"></i>
+                                    </div>
+                                </div>
+                                <div class="btwidth">
+                                    <button class="writebt bt prebt" onclick="pre()"><i class="fa-solid fa-arrow-left arrowl"></i>이전</button>
+                                    <button class="writebt bt" onclick="next()">다음<i class="fa-solid fa-arrow-right arrowr"></i></button>
+                                </div>
+                            </div>
+
+                            <div id="tab-content4" class="tab-content">
+                                <div class="col-md-12 col-sm-12 col-xs-12 oneline oneline4">
+                                    <div class="col-md-6 col-sm-6 col-xs-6 tabbox1">
+                                        <div>
+                                            <div class="tabboxlab">의뢰 예산</div>
+                                            <div>
+                                                <div class="tabboxbug">
+                                                    <input id="month" name="budget" type="radio"  checked="checked"/>
+                                                    <label for="month">월 단위</label>
+                                                </div>
+                                                <div class="tabboxbug">
+                                                    <input id="proj" name="budget" type="radio" class="radiosty" />
+                                                    <label for="proj">프로젝트 단위</label>
+                                                </div>  
+                                            </div>
+                                            <div>
+                                                <input id="minunit" name="minunit" type="number" class="form-control inputbox numbox bugbox" placeholder="최소 금액" min="100" 
+                                                step="10" onkeyup="NumberFormat()"/>만원
+                                                <span class="numunit">~</span>
+                                                <input id="maxunit" name="maxunit" type="number" class="form-control inputbox numbox bugbox" placeholder="최대 금액" min="100" 
+                                                step="10" onkeyup="minNum()"/>만원
+                                                <div id="bugerr" class="numunit bugerr">최소 금액보다 더 큰 금액을 쓰세요.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6 tabbox2">
+                                        <div class="tabboxlab">진행 방식</div>
+                                        <div class="dropdown choice">
+                                            <button class="btn btn-default dropdown-toggle rqmethod" type="button" id="dropdownMenu1"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                <span class="catechoi">선택해주세요.<span>
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu rqmethod" aria-labelledby="dropdownMenu3">
+                                                <li>외주</li>
+                                                <li>상주</li>
+                                            </ul>
+                                        </div>
+                                        <div class="dropdown choice">
+                                            <button class="btn btn-default dropdown-toggle rqreg" type="button" id="dropdownMenu1"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                <span class="catechoi">위치검색<span>
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu rqreg" aria-labelledby="dropdownMenu3">
+                                                <li>서울</li>
+                                                <li>부산</li>
+                                                <li>대구</li>
+                                                <li>인천</li>
+                                                <li>광주</li>
+                                                <li>대전</li>
+                                                <li>울산</li>
+                                                <li>세종</li>
+                                                <li>경기</li>
+                                                <li>강원</li>
+                                                <li>충북</li>
+                                                <li>충남</li>
+                                                <li>전북</li>
+                                                <li>전남</li>
+                                                <li>경북</li>
+                                                <li>경남</li>
+                                                <li>제주</li>
+                                                <li>해외</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btwidth">
+                                    <button class="writebt bt prebt" onclick="pre()"><i class="fa-solid fa-arrow-left arrowl"></i>이전</button>
+                                    <button class="writebt bt" onclick="next()">다음<i class="fa-solid fa-arrow-right arrowr"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div id="tab-content5" class="tab-content">
+                                <div class="col-md-12 col-sm-12 col-xs-12 tab5box">
+                                    <div class="col-md-6 col-sm-6 col-xs-6 tabbox1">
+                                        <div class="tabboxlab">프로젝트 개요</div>
+                                        <textarea id="outline" name="outline" class="form-control inputbox textareabox" placeholder=""></textarea>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6 tabbox2">
+                                        <div class="tabboxlab">주요 담당업무</div>
+                                        <textarea id="workbusiness" name="workbusiness" class="form-control inputbox textareabox" placeholder=""></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 tab5box">
+                                    <div class="col-md-6 col-sm-6 col-xs-6 tabbox1">
+                                        <div class="tabboxlab">기타 전달사항 또는 우대사항</div>
+                                        <textarea id="etc" name="etc" class="form-control inputbox textareabox" placeholder=""></textarea>
+                                    </div>
+                                </div>
+                                <div class="btwidth tab5bt">
+                                    <button class="writebt bt prebt" onclick="pre()"><i class="fa-solid fa-arrow-left arrowl"></i>이전</button>
+                                    <button class="writebt bt" onclick="next()">다음<i class="fa-solid fa-arrow-right arrowr"></i></button>
+                                </div>
+                            </div>
+
+                            <div id="tab-content6" class="tab-content">
+                                <div class="col-md-12 col-sm-12 col-xs-12 tab2box2 oneline">
+                                    <div class="col-md-6 col-sm-6 col-xs-6 tabbox1">
+                                        <div class="tabboxlab">지원자 모집 마감일</div>
+                                        <input type="text" class="form-control inputbox datebox" name="date" id="date2" size="12" placeholder="0000-00-00" readonly/>
+                                        <i class="fa fa-calendar cal" onclick="$('#date2').datepicker('show');"></i>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6 tabbox2">
+                                        <div class="tabboxlab">지원자 필수 요건</div>
+                                        <div id="needWrap">
+                                            <input id="need" name="need" type="text" class="form-control inputbox" placeholder=""/>
+                                            <button type="button" class="plusbt" id="plusbt"><i class="fa-solid fa-circle-plus" id="needicon"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btwidth">
+                                    <button class="writebt bt prebt" onclick="pre()"><i class="fa-solid fa-arrow-left arrowl"></i>이전</button>
+                                    <button class="writebt bt" onclick="next()">다음<i class="fa-solid fa-arrow-right arrowr"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+    <!--Start Community area -->
+    <div class="blog-area fix bg-color page-padding blog-area-mg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 pagmg">
+                    <div class="diposite-box dipo2">
+                        <ul class="ulsize">
+                            <li class="list-group-item">
+                                <h5 class="h5mg"><% if (editing) { %>글 수정하기<% } else { %>글쓰기<% } %></h5>
+                            </li>
+                            <form action="/request-personer/<% if (editing) { %>write/<%= post._id %><% } else { %>write<% } %>" method="POST">
+                                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                <li class="list-group-item">
+                                    <div class="form-group">
+                                        <label class="col-md-2 col-form-label">제목</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" name="title" id="title"
+                                                maxlength="255" value="<% if (editing) { %><%= post.title %><% } %>"required>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <textarea id="editor" name="content"><% if (editing) { %><%= post.content %><% } %></textarea>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                    </div>    
+                                </li>
+                                <% if (editing) { %>
+                                    <input type="hidden" value="<%= post._id %>" name="postId">
+                                <% } %>
+                                <input class="btn writebt btnsub" type="submit" value="<% if (editing) { %>수정완료<% } else { %>작성완료<% } %>">
+                            </form>
+
+                            <script>
+                                ClassicEditor
+                                    .create(document.querySelector('#editor'),{
+                                        simpleUpload: {
+                                            uploadUrl: '/request-personer/writing',
+                                        },
+                                    })
+                                    .catch(error => {
+                                        console.error(error);
+                                    });
+                            </script>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- End Community area -->
+
+    <%- include('../includes/footer.ejs') %>
+
+    <%- include('../includes/end.ejs') %>
+<!-- Mirrored from rockstheme.com/rocks/aievari-live/community.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:28:01 GMT -->
