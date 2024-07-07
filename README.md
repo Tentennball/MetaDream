@@ -23,3 +23,6 @@
 - 김인애 : 프론트엔드
 - 김채일 : 백엔드
 - 최은성 : 프론트엔드
+
+## 게시판
+![image](https://github.com/Tentennball/MetaDream/assets/86109399/1d5315a3-c54a-4faa-b1dd-d31ac3d7c2f1)
